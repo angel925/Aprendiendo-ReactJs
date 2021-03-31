@@ -1,12 +1,18 @@
-import React from 'react'
 
-const Result = (props) => {
-    console.log("Renderización de Rresult", props.value)
-    return (
-        <div className="result">
-            {props.value}
-        </div>
-    )
+import ProTypes from 'prop-types'
+
+const Result = ({ value }) => (
+    <div className="result">
+        {value}
+    </div>
+)
+
+//protypes requeridos 
+Result.proTypes = {
+    value: ProTypes.string.isRequired
+}
+Result.defaultProps = {
+    value: '0'
 }
 
 export default Result;
